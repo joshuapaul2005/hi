@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>  
+		body{  
+		background-color: lightblue;  
+		}  
+		#image {  
+		display: block;
+		background-color: black;  
+		}
+		.center {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 50%;
+		  }  
+		 
+		</style>  
+
+</head>
+<body>
+	
+
+<script>
+	var i = 0; // Start point
+	var images = [];
+	var time = 1000;
+
+	// Image List
+	images[0] = '1.jpeg';
+	images[1] = '2.jpeg';
+	images[2] = '3.jpeg';
+	images[3] = '4.jpeg';
+	images[5] = '5.jpeg';
+	images[6] = '6.jpeg';
+	images[7] = '7.jpeg';
+	images[8] = '8.jpeg';
+
+	// Change Image
+	function changeImg(){
+		document.slide.src = images[i];
+
+		if(i < images.length - 1){
+			i++;
+		} else {
+			i = 0;
+		}
+
+		setTimeout("changeImg()", time);
+	}
+
+	window.onload = changeImg;
+
+</script>
+<div class="center">
+<img name="slide" width="600" height="400">
+</div>
+
+<h1 style="color: darkmagenta;">  Happy mother's day</h1>
+<h2 style="color: darkorchid;">Thank you for taking care of us. We love you.</h2>
+<h3 style="color: red ;"> -By Anitha,Joshua,Stanley</h3>
+
+</body>
+</html>
+
